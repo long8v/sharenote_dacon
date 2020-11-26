@@ -157,7 +157,8 @@ for key, value in train_dict.items():
                                                  else 0 for idx, sen in enumerate(value['article_original'])]])
 
 
-# In[13]:
+np.array(list(zip(*bert_data))[0]).save('label.npy')
+daf# In[13]:
 
 
 bert_data[0]
@@ -239,21 +240,17 @@ import pickle
 
 # In[25]:
 
-
-documents = [] 
+i = 0
+documents = torch.Tensor([]) 
 for x, label in bert_data_transform:
-    document = []
+    document = torch.Tensor([])
     for input_tuple in x:
         input_ids, valid_len, token_type_ids = map(lambda e: torch.LongTensor(e).unsqueeze(0), input_tuple)
         sequence_output, pooled_output = model(input_ids, token_type_ids, token_type_ids)
-        document.append(pooled_output)
-    documents.append(document)    
-import pickle
-with open('BERT_embedding.p','wb') as f:
-    pickle.dump(documents, f)
+        document = torch.cat([document, pooled_output])    
 
-
-# In[ ]:
+    torch.save(document, 'file/doc_{}.pt'.format(i))
+    i += 1
 
 
 
