@@ -157,8 +157,11 @@ for key, value in train_dict.items():
                                                  else 0 for idx, sen in enumerate(value['article_original'])]])
 
 
+<<<<<<< HEAD
 np.array(list(zip(*bert_data))[0]).save('label.npy')
 daf# In[13]:
+=======
+>>>>>>> 2c4a34268b8c09a317a7e2ece7f31f2fcee5ca16
 
 
 bert_data[0]
@@ -243,6 +246,7 @@ import pickle
 i = 0
 documents = torch.Tensor([]) 
 for x, label in bert_data_transform:
+<<<<<<< HEAD
     document = torch.Tensor([])
     for input_tuple in x:
         input_ids, valid_len, token_type_ids = map(lambda e: torch.LongTensor(e).unsqueeze(0), input_tuple)
@@ -250,6 +254,17 @@ for x, label in bert_data_transform:
         document = torch.cat([document, pooled_output])    
 
     torch.save(document, 'file/doc_{}.pt'.format(i))
+=======
+    if i > 11926:
+        print(i)
+        document = torch.Tensor([])
+        for input_tuple in x:
+            input_ids, valid_len, token_type_ids = map(lambda e: torch.LongTensor(e).unsqueeze(0), input_tuple)
+            sequence_output, pooled_output = model(input_ids, token_type_ids, token_type_ids)
+            document = torch.cat([document, pooled_output])    
+
+    torch.save(document.to('cpu'), 'file/doc_{:05d}.pt'.format(i))
+>>>>>>> 2c4a34268b8c09a317a7e2ece7f31f2fcee5ca16
     i += 1
 
 
