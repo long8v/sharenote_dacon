@@ -1,4 +1,4 @@
-# sharenote_daconhttps://github.com/long8v/sharenote_dacon/edit/main/README.md
+# sharenote_dacon
 
 ## dependency 
 - torch==1.7
