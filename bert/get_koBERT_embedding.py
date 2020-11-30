@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+fn=<BinaryCrossEntropyBackward>),tensor(0.5958, grad_fn=<BinaryCrossEntropyBackward>)
+tensor(0.7047, grad_fn=<BinaryCrossEntropyBackward>),tensor(0.7047, grad_fn=<BinaryCrossEntropyBackward>)
+tensor(0.5637, grad_fn=<BinaryCrossEntropyBackward>),tensor(0.5637, grad_fn=<BinaryCrossEntropyBackward>)
+tensor(0.5247, grad_fn
 # In[1]:
 
 
@@ -41,7 +44,15 @@ sys.path.append('kobert/')
 import os
 import sys
 import requests
-import hashlib
+'tuple' object has no attribute 'dim'
+torch.Size([4, 17, 768]) torch.Size([4, 21, 1]) torch.Size([4, 17, 1])
+'tuple' object has no attribute 'dim'
+torch.Size([4, 25, 768]) torch.Size([4, 21, 1]) torch.Size([4, 25, 1])
+'tuple' object has no attribute 'dim''tuple' object has no attribute 'dim'
+torch.Size([4, 17, 768]) torch.Size([4, 21, 1]) torch.Size([4, 17, 1])
+'tuple' object has no attribute 'dim'
+torch.Size([4, 25, 768]) torch.Size([4, 21, 1]) torch.Size([4, 25, 1])
+'tuple' object has no attribute 'dim'import hashlib
 
 import torch
 
@@ -49,7 +60,11 @@ from transformers import BertModel, BertConfig
 import gluonnlp as nlp
 
 from utils import download as _download
-from utils import tokenizer
+from utils import tokenizer'tuple' object has no attribute 'dim'
+torch.Size([4, 17, 768]) torch.Size([4, 21, 1]) torch.Size([4, 17, 1])
+'tuple' object has no attribute 'dim'
+torch.Size([4, 25, 768]) torch.Size([4, 21, 1]) torch.Size([4, 25, 1])
+'tuple' object has no attribute 'dim'
 
 pytorch_kobert = {
     'url':
