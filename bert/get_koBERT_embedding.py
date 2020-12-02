@@ -44,15 +44,7 @@ sys.path.append('kobert/')
 import os
 import sys
 import requests
-'tuple' object has no attribute 'dim'
-torch.Size([4, 17, 768]) torch.Size([4, 21, 1]) torch.Size([4, 17, 1])
-'tuple' object has no attribute 'dim'
-torch.Size([4, 25, 768]) torch.Size([4, 21, 1]) torch.Size([4, 25, 1])
-'tuple' object has no attribute 'dim''tuple' object has no attribute 'dim'
-torch.Size([4, 17, 768]) torch.Size([4, 21, 1]) torch.Size([4, 17, 1])
-'tuple' object has no attribute 'dim'
-torch.Size([4, 25, 768]) torch.Size([4, 21, 1]) torch.Size([4, 25, 1])
-'tuple' object has no attribute 'dim'import hashlib
+import hashlib
 
 import torch
 
